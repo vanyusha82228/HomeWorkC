@@ -43,3 +43,23 @@ if (number3 > max)
 Console.WriteLine($"The largest number {max}");
 
 */
+
+
+
+
+// Task 3   Напишите программу, которая на вход принимает число и выдаёт, является ли число чётным (делится ли оно на два без остатка).
+
+/*
+Console.Write("Input int number ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+if (number%2==0)
+{
+    Console.WriteLine($"number {number} is even ");
+}
+else
+{
+    Console.WriteLine($"number {number} odd ");
+}
+*/
+
