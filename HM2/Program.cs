@@ -18,30 +18,21 @@ Console.WriteLine($"Second digit of the number {number} is {SecondDigit(number)}
 
 
 // Задание2. Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет
-/*
+
+
+
 int Dev(int num)
 {
-    if (num > 99 && num < 1000)
+    if(num<100)
     {
-        int third = num % 10;
-        return third;
+        return -1;
     }
-    if (num > 0 && num < 100)
+    else
     {
-        int third = -1;
-        return third;
-    }
-    if (num > 999 && num < 10000)
-    {
-        int fourth = num / 10;
-        int third = fourth %10;
-        return third;
-    }
-    if (num > 9999 && num < 100000)
-    {
-        int fifth = num / 100;
-        int third = fifth %10;
-        return third;
+        string str = num.ToString();
+        char chr = str[2];
+        int ThirdNumber = chr - '0';
+        return ThirdNumber;
     }
 }
 
@@ -49,11 +40,11 @@ Console.Write("Iput the number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine(Dev(number));
-*/
+
 
 // Задание3. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
-
+/*
 bool DayOfTheWeek(int num)
 {
     if (num >=8 || num<= 0)
@@ -82,4 +73,4 @@ int number = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine(DayOfTheWeek(number));
 
 
-
+*/
