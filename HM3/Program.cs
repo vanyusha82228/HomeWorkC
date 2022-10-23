@@ -1,5 +1,25 @@
 ﻿// Задание 1. Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
 
+bool Poli(int num)
+{
+    int temp =num;
+    int revers= 0;
+    while (temp>0)
+    {
+        int des= temp%10;
+        revers =revers*10 + des;
+        temp= temp/10;
+    }
+    if (num==revers)
+        return true;
+    else
+        return false;
+}
+
+Console.Write("Input fnumber : ");
+int number = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine(Poli(number));
 
 
 
@@ -35,7 +55,7 @@ Console.WriteLine(Rast(x1, y1,z1, x2, y2,z2));
 
 
 // Задание 3.Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
-
+/*
 void Tabl(int num)
 {
     int nach=1;
@@ -52,3 +72,4 @@ Console.Write("Input fnumber : ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 Tabl(number);
+*/
