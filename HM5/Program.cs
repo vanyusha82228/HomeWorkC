@@ -1,5 +1,5 @@
 ﻿// Задание 1.Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
-
+/*
 int[] CreateRandomArreay(int size)  
 {
     int[] array = new int[size];
@@ -36,9 +36,50 @@ int [] myArray = CreateRandomArreay(n);
 ShowArray(myArray);
 
 Console.WriteLine($"in array so many even numbers {kolvo(myArray)}");
-
+*/
 
 // Задание 2.Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+/*
+int[] CreateRandomArreay(int size, int minValue, int maxValue)  
+{
+    int[] array = new int[size];
+
+    for(int i=0 ; i<size; i++)
+        array[i] = new Random().Next(minValue, maxValue+1);
+
+    return  array;
+}
+
+void ShowArray(int[] array) 
+{
+    for(int i=0; i<array.Length; i++)
+        Console.Write(array[i]+ " ");
+
+    Console.WriteLine();
+}
+
+int negativSum(int[] array)
+{
+    int sum =0;
+    for(int i=0;i<array.Length; i++)
+        if(i%2!=0)
+            sum+=array[i];
+    return sum;
+}
+
+Console.Write("input number of elements: ");
+int n = Convert.ToInt32(Console.ReadLine());
+Console.Write("input min posibel value: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("input max posiber value: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+int [] myArray = CreateRandomArreay(n, min, max);
+ShowArray(myArray);
+
+Console.WriteLine($"the sum of odd array elements is {negativSum(myArray)}");
+
+*/
 
 
 // Задание 3. Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
