@@ -10,7 +10,7 @@ ShowNums(5);
 */
 
 //  Задайте значения M и N. Напишите программу, которая найдёт сумму натуральных элементов в промежутке от M до N.
-
+/*
 int SumElements(int m, int n)
 {
     if(m>n) 
@@ -23,5 +23,23 @@ int SumElements(int m, int n)
 }
 
 Console.WriteLine(SumElements(1,5));
-
+*/
 // Напишите программу вычисления функции Аккермана с помощью рекурсии. Даны два неотрицательных числа m и n.
+
+int Ackerman(int firstElement, int secondElement)
+{
+    if(firstElement==0)
+        return secondElement+1;
+    else if(firstElement>0 && secondElement== 0)
+        return Ackerman(firstElement-1,1);
+    else 
+        return Ackerman(firstElement-1,Ackerman(firstElement,secondElement-1));
+}
+
+Console.Write("input Feirst number : ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("input  seconf number : ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+
+Console.WriteLine(Ackerman(m,n));
